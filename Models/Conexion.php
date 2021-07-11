@@ -30,7 +30,7 @@ class Conexion
         $this->con->query($sql);
     }
 
-    public function consultarRetorno($sql)
+    public function consultaRetorno($sql)
     {
         $datos = $this->con->query($sql);
         return $datos;
