@@ -10,6 +10,7 @@ class Enrutador
         $controlador = $request->getControlador() . "Controller";
         $ruta = ROOT . "Controllers" . DS . $controlador . ".php";
         $metodo = $request->getMetodo();
+
         if ($metodo == "index.php") {
 
             $metodo = "index";
