@@ -28,5 +28,13 @@ class Enrutador
                 call_user_func_array(array($controlador, $metodo), $argumento);
             }
         }
+
+        $ruta = ROOT . "Viwes " . DS . $request->getControlador() . DS . $request->getMetodo() . ".php";
+        if (is_readable($ruta)) {
+
+            require_once $ruta;
+        } else {
+            print "No se encontró la ruta";
+        }
     }
 }

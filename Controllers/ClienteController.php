@@ -7,6 +7,6 @@ class ClienteController
 
     public function index()
     {
-        print "Hola soy el index";
+        echo "Hola soy el index";
     }
 }

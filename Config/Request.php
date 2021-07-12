@@ -17,9 +17,10 @@ class Request
             $ruta = array_filter($ruta);
             if ($ruta[0] == "index.php") {
                 $this->controlador = "clientes";
+            } else {
+                $this->controlador = strtolower(array_shift($ruta));
             }
 
-            $this->controlador = strtolower(array_shift($ruta));
             $this->metodo = strtolower(array_shift($ruta));
 
             if ($this->metodo) {
@@ -27,6 +28,9 @@ class Request
             }
 
             $this->argumento = $ruta;
+        } else {
+            $this->controlador = "clientes";
+            $this->metodo = "index";
         }
     }
 
