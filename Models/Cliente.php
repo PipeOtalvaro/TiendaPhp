@@ -22,6 +22,16 @@ class Cliente
         $this->con = new Conexion();
     }
 
+    public function set($atributo, $contenido)
+    {
+        $this->$atributo = $contenido;
+    }
+
+    public function get($atributo)
+    {
+        return $this->$atributo;
+    }
+
     public function listar()
     {
         $sql = "select C.NOMBRE. concat(C.PRIMER_APELLIDO, ' ', C.SEGUNDO_APELLIDO) apellidos from clientes C ";
@@ -46,7 +56,7 @@ class Cliente
 
     public function update()
     {
-        $sql = "UPDATE FROM clientes SET nombre = '{$this->nombre}', primer_apellido = '{$this->primerApellido}',
+        $sql = "UPDATE clientes SET nombre = '{$this->nombre}', primer_apellido = '{$this->primerApellido}',
         segundo_apellido = '{$this->segundoApellido}', telefono = '{$this->telefono}', email = '{$this->email}', 
         direccion='{$this->direccion}' WHERE id = '{$this->id}'";
         $this->con->consultaSimple($sql);
@@ -56,6 +66,7 @@ class Cliente
     {
         $sql = "SELECT c FROM clientes c WHERE id = '{$this->id}";
         $datos = $this->con->consultaRetorno($sql);
-        return $datos;
+        $row = mysqli_fetch_assoc($datos);
+        return $row;
     }
 }

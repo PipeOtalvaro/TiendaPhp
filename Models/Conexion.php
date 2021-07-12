@@ -2,8 +2,6 @@
 
 namespace Models;
 
-use mysqli;
-
 class Conexion
 {
     private $datos = array(
