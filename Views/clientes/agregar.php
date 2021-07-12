@@ -25,15 +25,15 @@
                         </div>
                         <div class="form-group">
                             <label for="inputEmail" class="control-label">Telefono</label>
-                            <input class="form-control" name="promedio" type="number" required>
+                            <input class="form-control" name="telefono" type="number" required>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail" class="control-label">Email</label>
-                            <input class="form-control" name="promedio" type="email" required>
+                            <input class="form-control" name="email" type="email" required>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail" class="control-label">Dirección</label>
-                            <input class="form-control" name="promedio" type="text" required>
+                            <input class="form-control" name="direccion" type="text" required>
                         </div>
 
                         <div class="form-group">
