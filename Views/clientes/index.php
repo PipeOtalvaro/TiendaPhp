@@ -22,7 +22,7 @@
                 <tbody>
                     <?php while ($row = mysqli_fetch_array($datos)) { ?>
                         <tr>
-                            <td><img class="imagen-avatar" src="<?php echo URL; ?>Views/template/imagenes/avatars/<?php echo $row['imagen']; ?>"></td>
+                            <td><img class="imagen-avatar" src="<?php echo URL; ?>Views/template/images/avatars/<?php echo $row['foto']; ?>"></td>
                             <td><a href="<?php echo URL; ?>clientes/ver/<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></a></td>
                             <td><?php echo $row['primerApellido' . 'segundoApellido']; ?></td>
                             <td><?php echo $row['telefono']; ?></td>
